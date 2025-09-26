@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | CodeWith Yogi Patel</title>
+    <meta name="description"
+        content="Explore our premium courses in Data Science, Web Development, Python, and more. Start your learning journey with expert-led courses.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>CodeWith Yogi Patel</span>
+                </div>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="active">Courses</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Notes</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <div class="nav-buttons">
+                    <a href="login.html" > <button class="btn btn-outline">Login</button> </a>
+                    <button class="btn btn-primary btn-glow">Signup</button>
+                </div>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="courses-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Expand Your Knowledge with Our Courses</h1>
+                    <p>Join thousands of students learning to code with our expertly crafted courses</p>
+
+                    <div class="search-container">
+                        <input type="text" class="search-input" id="searchInput" placeholder="Search for courses...">
+                        <button class="search-btn" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">All Courses</button>
+                        <button class="filter-tab" data-filter="web">Web Development</button>
+                        <button class="filter-tab" data-filter="data">Data Science</button>
+                        <button class="filter-tab" data-filter="python">Python</button>
+                        <button class="filter-tab" data-filter="mobile">Mobile</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section class="courses-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Courses</h2>
+                    <div class="sort-dropdown">
+                        <select id="sortSelect">
+                            <option value="featured">Featured</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="newest">Newest</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="courses-grid" id="coursesGrid">
+                    <!-- Course Card 1 -->
+                    <div class="course-card" data-category="data" data-price="2899" data-rating="4.8">
+                        <div class="course-badge featured">Featured</div>
+                        <div class="course-discount">36% OFF</div>
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Data Science Course">
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">The Ultimate Job Ready Data Science Course</h3>
+                            <p class="course-description">Ready to break into the world of Data Science? This all-in-one
+                                Job-Ready course covers everything from Python basics to advanced machine learning
+                                techniques.</p>
+
+                            <div class="course-meta">
+                                <div class="instructor">
+                                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Yogi Patel"
+                                        class="instructor-avatar">
+                                    <span>Yogi Patel</span>
+                                </div>
+                                <div class="course-stats">
+                                    <span class="course-level">
+                                        <i class="fas fa-signal"></i> Beginner
+                                    </span>
+                                    <span class="course-duration">
+                                        <i class="fas fa-clock"></i> 31h 4m
+                                    </span>
+                                    <span class="course-lessons">
+                                        <i class="fas fa-book"></i> 186 lessons
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="course-footer">
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span>4.8 (2,456)</span>
+                                </div>
+                                <div class="course-price">
+                                    <span class="current-price">₹2899</span>
+                                    <span class="original-price">₹4499</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary course-btn">View Course</button>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 2 -->
+                    <div class="course-card" data-category="web" data-price="788" data-rating="4.7">
+                        <div class="course-discount">62% OFF</div>
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Web Development Course">
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Ultimate Web Development Course 2025 - Build Modern Websites</h3>
+                            <p class="course-description">This is the only modern, always up-to-date Web Development
+                                course you will ever need. Learn HTML, CSS, JavaScript, React, and more.</p>
+
+                            <div class="course-meta">
+                                <div class="instructor">
+                                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Yogi Patel"
+                                        class="instructor-avatar">
+                                    <span>Yogi Patel</span>
+                                </div>
+                                <div class="course-stats">
+                                    <span class="course-level">
+                                        <i class="fas fa-signal"></i> Beginner
+                                    </span>
+                                    <span class="course-duration">
+                                        <i class="fas fa-clock"></i> 21h 21m
+                                    </span>
+                                    <span class="course-lessons">
+                                        <i class="fas fa-book"></i> 143 lessons
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="course-footer">
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span>4.7 (3,891)</span>
+                                </div>
+                                <div class="course-price">
+                                    <span class="current-price">₹788</span>
+                                    <span class="original-price">₹2069</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary course-btn">View Course</button>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 3 -->
+                    <div class="course-card" data-category="python" data-price="388" data-rating="4.9">
+                        <div class="course-discount">81% OFF</div>
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Python Course">
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Complete 2025 Python Bootcamp: Learn Python from Scratch</h3>
+                            <p class="course-description">Unlock your potential and become a confident Python developer
+                                in 2025! This comprehensive course covers everything from basics to advanced concepts.
+                            </p>
+
+                            <div class="course-meta">
+                                <div class="instructor">
+                                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Yogi Patel"
+                                        class="instructor-avatar">
+                                    <span>Yogi Patel</span>
+                                </div>
+                                <div class="course-stats">
+                                    <span class="course-level">
+                                        <i class="fas fa-signal"></i> Beginner
+                                    </span>
+                                    <span class="course-duration">
+                                        <i class="fas fa-clock"></i> 15h 5m
+                                    </span>
+                                    <span class="course-lessons">
+                                        <i class="fas fa-book"></i> 99 lessons
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="course-footer">
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span>4.9 (5,432)</span>
+                                </div>
+                                <div class="course-price">
+                                    <span class="current-price">₹388</span>
+                                    <span class="original-price">₹2000</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary course-btn">View Course</button>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 4 -->
+                    <div class="course-card" data-category="mobile" data-price="1299" data-rating="4.6">
+                        <div class="course-discount">45% OFF</div>
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Mobile Development Course">
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">React Native - The Practical Guide 2025</h3>
+                            <p class="course-description">Build native mobile apps for both Android and iOS using React
+                                Native. Learn from scratch and build real-world projects.</p>
+
+                            <div class="course-meta">
+                                <div class="instructor">
+                                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Priya Sharma"
+                                        class="instructor-avatar">
+                                    <span>Priya Sharma</span>
+                                </div>
+                                <div class="course-stats">
+                                    <span class="course-level">
+                                        <i class="fas fa-signal"></i> Intermediate
+                                    </span>
+                                    <span class="course-duration">
+                                        <i class="fas fa-clock"></i> 28h 15m
+                                    </span>
+                                    <span class="course-lessons">
+                                        <i class="fas fa-book"></i> 210 lessons
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="course-footer">
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span>4.6 (1,789)</span>
+                                </div>
+                                <div class="course-price">
+                                    <span class="current-price">₹1299</span>
+                                    <span class="original-price">₹2399</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary course-btn">View Course</button>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 5 -->
+                    <div class="course-card" data-category="web" data-price="999" data-rating="4.7">
+                        <div class="course-discount">50% OFF</div>
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="JavaScript Course">
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">JavaScript - The Complete Guide 2025</h3>
+                            <p class="course-description">Master JavaScript with this comprehensive course. Learn ES6+,
+                                asynchronous programming, DOM manipulation, and modern frameworks.</p>
+
+                            <div class="course-meta">
+                                <div class="instructor">
+                                    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Rajesh Kumar"
+                                        class="instructor-avatar">
+                                    <span>Rajesh Kumar</span>
+                                </div>
+                                <div class="course-stats">
+                                    <span class="course-level">
+                                        <i class="fas fa-signal"></i> Intermediate
+                                    </span>
+                                    <span class="course-duration">
+                                        <i class="fas fa-clock"></i> 25h 30m
+                                    </span>
+                                    <span class="course-lessons">
+                                        <i class="fas fa-book"></i> 175 lessons
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="course-footer">
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span>4.7 (2,345)</span>
+                                </div>
+                                <div class="course-price">
+                                    <span class="current-price">₹999</span>
+                                    <span class="original-price">₹1999</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary course-btn">View Course</button>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 6 -->
+                    <div class="course-card" data-category="data" data-price="1599" data-rating="4.8">
+                        <div class="course-badge featured">Featured</div>
+                        <div class="course-discount">40% OFF</div>
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Machine Learning Course">
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Machine Learning A-Z: Hands-On Python & R In Data Science</h3>
+                            <p class="course-description">Learn to create Machine Learning Algorithms in Python and R
+                                from two Data Science experts. Code templates included.</p>
+
+                            <div class="course-meta">
+                                <div class="instructor">
+                                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Amit Singh"
+                                        class="instructor-avatar">
+                                    <span>Amit Singh</span>
+                                </div>
+                                <div class="course-stats">
+                                    <span class="course-level">
+                                        <i class="fas fa-signal"></i> Advanced
+                                    </span>
+                                    <span class="course-duration">
+                                        <i class="fas fa-clock"></i> 44h 10m
+                                    </span>
+                                    <span class="course-lessons">
+                                        <i class="fas fa-book"></i> 305 lessons
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="course-footer">
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span>4.8 (3,210)</span>
+                                </div>
+                                <div class="course-price">
+                                    <span class="current-price">₹1599</span>
+                                    <span class="original-price">₹2699</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary course-btn">View Course</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="page-link disabled"><i class="fas fa-chevron-left"></i></a>
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to our newsletter and be the first to know about new courses and special offers.</p>
+
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Main</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Work With Us</a></li>
+                        <li><a href="#">My Gear</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Learn</h3>
+                    <ul>
+                        <li><a href="#" class="active">Courses</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Notes</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Refund</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Connect With Us</h3>
+                    <p>Follow us on social media for the latest updates and coding tips.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2023 CodeWith Yogi Patel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="course.css">
+    <script src="course.js"></script>
+</body>
+
+</html>
