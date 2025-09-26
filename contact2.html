@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CodeWith Yogi Patel</title>
+    <meta name="description" content="Get in touch with CodeWith Yogi Patel for any inquiries, collaborations, or support.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">CodeWith <span>Yogi Patel</span></a>
+                </div>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="course.html">Courses</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="sing.html">Signup</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Get In Touch</h1>
+                <p>Have questions or feedback? We'd love to hear from you!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Contact <span>Us</span></h2>
+                    <p>Reach out to us through any of the following channels</p>
+                </div>
+
+                <div class="contact-container">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <div class="form-header">
+                            <h3>Send us a message</h3>
+                            <p>Fill out the form below and we'll get back to you as soon as possible</p>
+                        </div>
+
+                        <form id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                                    <span class="input-icon"><i class="fas fa-user"></i></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                    <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                                    <span class="input-icon"><i class="fas fa-phone"></i></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <select id="subject" name="subject" required>
+                                        <option value="" disabled selected>Select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="course">Course Information</option>
+                                        <option value="technical">Technical Support</option>
+                                        <option value="collaboration">Collaboration</option>
+                                        <option value="feedback">Feedback</option>
+                                    </select>
+                                    <span class="input-icon"><i class="fas fa-tag"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                                <span class="input-icon"><i class="fas fa-comment-alt"></i></span>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Subscribe to our newsletter for updates</label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn-submit">
+                                    <span>Send Message</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                                <button type="reset" class="btn-reset">
+                                    <span>Reset Form</span>
+                                    <i class="fas fa-redo"></i>
+                                </button>
+                            </div>
+                        </form>
+
+                        <div id="formMessage" class="form-message"></div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info-container">
+                        <div class="info-card">
+                            <div class="card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Our Location</h3>
+                                <p>123 Education Street,<br>Learning City, LC 12345</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="card-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Phone Number</h3>
+                                <p>+1 (123) 456-7890<br>Mon-Fri 9AM-5PM</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Email Address</h3>
+                                <p>contact@codewithyogi.com<br>support@codewithyogi.com</p>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <h3>Follow Us</h3>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon linkedin">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-icon youtube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="social-icon github">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="faq-section">
+                    <div class="section-header">
+                        <h2>Frequently Asked <span>Questions</span></h2>
+                        <p>Find answers to common questions about our courses and services</p>
+                    </div>
+
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How do I enroll in a course?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>To enroll in a course, simply visit our courses page, select the course you're interested in, and click on the "Enroll Now" button. You'll be guided through the registration and payment process.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Do you offer any discounts for students?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we offer special discounts for students with valid .edu email addresses. Additionally, we have seasonal promotions and bundle discounts for multiple courses.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Can I get a certificate after completing a course?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! Upon successful completion of any course, you'll receive a verified certificate that you can share on your LinkedIn profile, resume, or with potential employers.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What if I'm not satisfied with a course?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We offer a 30-day money-back guarantee for all our courses. If you're not satisfied within the first 30 days of purchase, simply contact our support team for a full refund.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Section -->
+                <div class="map-section">
+                    <div class="section-header">
+                        <h2>Find <span>Us</span></h2>
+                        <p>Visit our office or explore our location on the map</p>
+                    </div>
+
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <div class="map-overlay">
+                                <div class="map-info">
+                                    <h3>CodeWith Yogi Patel</h3>
+                                    <p>123 Education Street<br>Learning City, LC 12345</p>
+                                    <a href="#" class="btn-directions">Get Directions <i class="fas fa-directions"></i></a>
+                                </div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1569336415962-4c0f8c8da3f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Map Location">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>CodeWith <span>Yogi Patel</span></h2>
+                    <p>Made with ❤️ and ☕ in India</p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Main</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="workwithus.html">Work With Us</a></li>
+                            <li><a href="mygear.html">My Gear</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Learn</h3>
+                        <ul>
+                            <li><a href="course.html">Courses</a></li>
+                            <li><a href="tutorials.html">Tutorials</a></li>
+                            <li><a href="notes.html">Notes</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="terms.html">Terms</a></li>
+                            <li><a href="PrivacyPolicy.html">Privacy</a></li>
+                            <li><a href="refund.html">Refund</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to get the latest updates and offers</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CodeWith Yogi Patel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="contact2.css">
+    <script src="contact2.js"></script>
+
+    <script src="contact.js"></script>
+</body>
+</html>

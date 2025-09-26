@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - CodeWith Yogi Patel</title>
+    <meta name="description" content="Create your account with CodeWith Yogi Patel to access our courses and tutorials.">
+    <link rel="stylesheet" href="sing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">CodeWith <span>Yogi Patel</span></a>
+                </div>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="course.html">Courses</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="sing.html" class="active">Signup</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="signup-section">
+            <div class="container">
+                <div class="signup-container">
+                    <div class="signup-form">
+                        <div class="form-header">
+                            <h1>Welcome!</h1>
+                            <p>Create your account</p>
+                        </div>
+
+                        <div class="social-signup">
+                            <p>Choose your preferred social account for instant signup</p>
+                            <div class="social-buttons">
+                                <button class="social-btn google-btn">
+                                    <div class="btn-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z"/>
+                                        </svg>
+                                    </div>
+                                    <span>Continue with Google</span>
+                                </button>
+                                <button class="social-btn github-btn">
+                                    <div class="btn-icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <span>Continue with GitHub</span>
+                                </button>
+                                <button class="social-btn microsoft-btn">
+                                    <div class="btn-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zm12.6 0H12.6V0H24v11.4z"/>
+                                        </svg>
+                                    </div>
+                                    <span>Continue with Microsoft</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="divider">
+                            <span>Or</span>
+                        </div>
+
+                        <form id="signupForm">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <div class="password-input">
+                                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                                    <button type="button" class="toggle-password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-strength">
+                                    <div class="strength-meter">
+                                        <div class="strength-meter-fill"></div>
+                                    </div>
+                                    <span class="strength-text">Password strength</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <div class="password-input">
+                                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                                    <button type="button" class="toggle-password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">I agree to the <a href="terms.html">Terms of Service</a> and <a href="PrivacyPolicy.html">Privacy Policy</a></label>
+                            </div>
+                            <button type="submit" class="btn-submit">Sign Up</button>
+                        </form>
+
+                        <div class="form-footer">
+                            <p>Already have an account? <a href="login.html">Login</a></p>
+                        </div>
+
+                        <div id="formMessage" class="form-message"></div>
+                    </div>
+
+                    <div class="signup-image">
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Coding">
+                        </div>
+                        <div class="image-text">
+                            <h2>Join Our Learning Community</h2>
+                            <p>Access premium coding courses, tutorials, and resources to boost your programming skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>CodeWith <span>Yogi Patel</span></h2>
+                    <p>Made with ❤️ and ☕ in India</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Main</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="workwithus.html">Work With Us</a></li>
+                            <li><a href="mygear.html">My Gear</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Learn</h3>
+                        <ul>
+                            <li><a href="course.html">Courses</a></li>
+                            <li><a href="tutorials.html">Tutorials</a></li>
+                            <li><a href="notes.html">Notes</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="terms.html">Terms</a></li>
+                            <li><a href="PrivacyPolicy.html">Privacy</a></li>
+                            <li><a href="refund.html">Refund</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Social</h3>
+                        <ul>
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">Twitter (X)</a></li>
+                            <li><a href="#">YouTube</a></li>
+                            <li><a href="#">Facebook</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CodeWith Yogi Patel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="contact.css">
+    <script src="contact.js"></script>
+
+    <script src="sing.js"></script>
+</body>
+</html>
