@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CodeWithYogiPatel - Learn programming with our comprehensive tutorials and courses">
+    <meta name="keywords" content="programming, tutorials, courses, HTML, CSS, JavaScript, Python, C, React, Java, C++, PHP">
+    <meta name="author" content="Yogi Patel">
+    <title>HTML Tutorial - CodeWithYogiPatel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --white: #ffffff;
+            --black: #000000;
+            --gray: #95a5a6;
+            --light-gray: #f8f9fa;
+            --dark-gray: #7f8c8d;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --border-radius: 5px;
+            --font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--light-gray);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        .header {
+            position: relative;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: var(--white);
+            padding: 0;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+        }
+
+        .header-top {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .header-main {
+            padding: 15px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo a {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo a span {
+            color: var(--primary-color);
+        }
+
+        .search-bar {
+            flex: 0 0 40%;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px 15px 10px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            transition: var(--transition);
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+        }
+
+        .search-bar button {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--dark-gray);
+            cursor: pointer;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-actions a {
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: var(--transition);
+        }
+
+        .nav-actions a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-actions .login-btn {
+            border: 1px solid var(--white);
+        }
+
+        .nav-actions .login-btn:hover {
+            background-color: var(--white);
+            color: var(--secondary-color);
+        }
+
+        .nav-actions .signup-btn {
+            background-color: var(--accent-color);
+        }
+
+        .nav-actions .signup-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--white);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            background-color: var(--secondary-color);
+            padding: 0;
+        }
+
+        .nav-menu ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu ul li {
+            position: relative;
+        }
+
+        .nav-menu ul li a {
+            display: block;
+            padding: 15px 20px;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-menu ul li a:hover {
+            background-color: var(--primary-color);
+        }
+
+        .nav-menu ul li a.active {
+            background-color: var(--primary-color);
+        }
+
+        .nav-menu ul li a i {
+            margin-right: 8px;
+        }
+
+        /* Main Content Area */
+        .main-container {
+            display: flex;
+            flex: 1;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 280px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 20px 0;
+            position: relative;
+            overflow-y: auto;
+            transition: var(--transition);
+        }
+
+        .sidebar-header {
+            padding: 0 20px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .sidebar-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sidebar-title i {
+            font-size: 1rem;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .sidebar-title i:hover {
+            opacity: 1;
+        }
+
+        .sidebar-search {
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-search input {
+            width: 100%;
+            padding: 10px 15px;
+            border: none;
+            border-radius: var(--border-radius);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .sidebar-search input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .sidebar-search input:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            position: relative;
+        }
+
+        .sidebar-menu li a {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .sidebar-menu li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+        }
+
+        .sidebar-menu li a.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .sidebar-menu li a i {
+            margin-right: 10px;
+            font-size: 1rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .sidebar-menu li a .badge {
+            margin-left: auto;
+            background-color: var(--accent-color);
+            color: var(--white);
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 10px;
+        }
+
+        .sidebar-submenu {
+            list-style: none;
+            background-color: rgba(0, 0, 0, 0.1);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .sidebar-submenu.active {
+            max-height: 500px;
+        }
+
+        .sidebar-submenu li a {
+            padding-left: 50px;
+            font-size: 0.9rem;
+        }
+
+        .sidebar-submenu li a.active {
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .sidebar-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .sidebar-footer a:hover {
+            background-color: #2980b9;
+        }
+
+        .sidebar-footer a i {
+            margin-right: 8px;
+        }
+
+        /* Toggle Button */
+        .sidebar-toggle {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            z-index: 1001;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 10px;
+            cursor: pointer;
+            display: none;
+            transition: var(--transition);
+        }
+
+        .sidebar-toggle:hover {
+            background-color: #2980b9;
+        }
+
+        /* Content Area */
+        .content-area {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .content-header {
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+
+        .content-header h1 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .content-header p {
+            color: var(--dark-gray);
+        }
+
+        .content-body {
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .content-body h2 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .content-body p {
+            color: var(--dark-gray);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: var(--white);
+            padding: 70px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233498db' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-col {
+            position: relative;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .footer-logo a {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .footer-logo a span {
+            color: var(--primary-color);
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links li a i {
+            margin-right: 8px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links li a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 10px;
+        }
+
+        .footer-links-inline {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .footer-links-inline li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links-inline li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: var(--shadow);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: #2980b9;
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .sidebar {
+                width: 250px;
+            }
+            
+            .search-bar {
+                flex: 0 0 30%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-top {
+                display: none;
+            }
+
+            .search-bar {
+                display: none;
+            }
+
+            .nav-actions {
+                display: none;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 300px;
+                height: 100vh;
+                background-color: var(--secondary-color);
+                transition: var(--transition);
+                z-index: 1001;
+                overflow-y: auto;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-menu ul {
+                flex-direction: column;
+            }
+
+            .nav-menu ul li a {
+                padding: 15px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: -280px;
+                height: 100vh;
+                z-index: 1000;
+            }
+
+            .sidebar.active {
+                left: 0;
+            }
+
+            .sidebar-toggle {
+                display: block;
+            }
+
+            .main-container {
+                flex-direction: column;
+            }
+
+            .content-area {
+                margin-left: 0;
+            }
+        }
+
+        /* SVG Background */
+        .svg-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- SVG Background -->
+        <svg class="svg-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,133.3C960,128,1056,96,1152,90.7C1248,85,1344,107,1392,117.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+        </svg>
+
+        <!-- Header Top -->
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-envelope"></i> info@codewithyogipatel.com</span>
+                        <span><i class="fas fa-phone"></i> +123 456 7890</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header Main -->
+        <div class="header-main">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7V12C2 16.5 4.23 20.68 7.62 23.15L12 24L16.38 23.15C19.77 20.68 22 16.5 22 12V7L12 2Z" fill="#3498db"/>
+                            <path d="M12 4.5L4.5 8.5V12C4.5 15.5 6.25 18.68 8.75 20.5L12 21L15.25 20.5C17.75 18.68 19.5 15.5 19.5 12V8.5L12 4.5Z" fill="#ffffff"/>
+                            <path d="M10 14L8 12L10 10L11 11L9 13L10 14Z" fill="#2c3e50"/>
+                            <path d="M14 14L16 12L14 10L13 11L15 13L14 14Z" fill="#2c3e50"/>
+                            <path d="M12 15L10 13L11 12L12 13L13 12L14 13L12 15Z" fill="#2c3e50"/>
+                        </svg>
+                        <a href="index.html">CodeWith<span>YogiPatel</span></a>
+                    </div>
+                    
+                    <div class="search-bar">
+                        <button type="button"><i class="fas fa-search"></i></button>
+                        <input type="text" placeholder="Search tutorials, courses...">
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <a href="#" class="login-btn">Login</a>
+                        <a href="#" class="signup-btn">Signup</a>
+                    </div>
+                    
+                    <div class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li>
+                    <a href="course.html"><i class="fas fa-book"></i> Courses</a>
+                </li>
+                <li>
+                    <a href="t.html" class="active"><i class="fas fa-code"></i> Tutorials</a>
+                </li>
+                <li><a href="#"><i class="fas fa-sticky-note"></i> Notes</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar Toggle Button -->
+        <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <!-- SVG Background -->
+            <svg class="svg-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,133.3C960,128,1056,96,1152,90.7C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+
+            <div class="sidebar-header">
+                <div class="sidebar-title">
+                    <span><i class="fas fa-code"></i> HTML Tutorial</span>
+                    <i class="fas fa-times" id="sidebarClose"></i>
+                </div>
+            </div>
+
+            <div class="sidebar-search">
+                <input type="text" placeholder="Search lessons...">
+            </div>
+
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#" class="active">
+                        <i class="fas fa-home"></i>
+                        <span>Introduction</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="submenu-toggle">
+                        <i class="fas fa-code"></i>
+                        <span>HTML Basic Tags</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="#" class="active">HTML Headings</a></li>
+                        <li><a href="#">HTML Paragraphs</a></li>
+                        <li><a href="#">HTML Links</a></li>
+                        <li><a href="#">HTML Images</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="submenu-toggle">
+                        <i class="fas fa-th-large"></i>
+                        <span>Inline & Block Elements</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="#">Block Elements</a></li>
+                        <li><a href="#">Inline Elements</a></li>
+                        <li><a href="#">Inline-Block Elements</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="submenu-toggle">
+                        <i class="fas fa-list"></i>
+                        <span>HTML Lists</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="#">Unordered Lists</a></li>
+                        <li><a href="#">Ordered Lists</a></li>
+                        <li><a href="#">Description Lists</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="submenu-toggle">
+                        <i class="fas fa-table"></i>
+                        <span>HTML Tables</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="#">Basic Tables</a></li>
+                        <li><a href="#">Table Headers</a></li>
+                        <li><a href="#">Table Styling</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="submenu-toggle">
+                        <i class="fas fa-wpforms"></i>
+                        <span>HTML Forms</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="#">Form Elements</a></li>
+                        <li><a href="#">Input Types</a></li>
+                        <li><a href="#">Form Validation</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-heading"></i>
+                        <span>Head Elements</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-photo-video"></i>
+                        <span>HTML Media</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-ellipsis-h"></i>
+                        <span>Miscellaneous Tags</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <a href="#">
+                    <i class="fas fa-download"></i>
+                    <span>Download PDF</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <div class="content-header">
+                <h1>HTML Tutorial</h1>
+                <p>The word hypertext markup language is composed of the words "hypertext" and "markup language". The term "hypertext" refers to the linking of text with other documents and "markup language" refers to a language that uses a set of tags.</p>
+            </div>
+
+            <div class="content-body">
+                <h2>Get Started</h2>
+                <p>Welcome to the HTML Tutorial tutorial series! To begin learning:</p>
+                <ul>
+                    <li>Select a lesson from the sidebar on the left</li>
+                    <li>Work through the lessons in order for the best learning experience</li>
+                    <li>Each lesson contains detailed explanations and examples</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <svg class="footer-logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7V12C2 16.5 4.23 20.68 7.62 23.15L12 24L16.38 23.15C19.77 20.68 22 16.5 22 12V7L12 2Z" fill="#3498db"/>
+                            <path d="M12 4.5L4.5 8.5V12C4.5 15.5 6.25 18.68 8.75 20.5L12 21L15.25 20.5C17.75 18.68 19.5 15.5 19.5 12V8.5L12 4.5Z" fill="#ffffff"/>
+                            <path d="M10 14L8 12L10 10L11 11L9 13L10 14Z" fill="#2c3e50"/>
+                            <path d="M14 14L16 12L14 10L13 11L15 13L14 14Z" fill="#2c3e50"/>
+                            <path d="M12 15L10 13L11 12L12 13L13 12L14 13L12 15Z" fill="#2c3e50"/>
+                        </svg>
+                        <a href="index.html">CodeWith<span>YogiPatel</span></a>
+                    </div>
+                    <p>Learn programming with our comprehensive tutorials and courses designed for all levels.</p>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Learn</h3>
+                    <ul class="footer-links">
+                        <li><a href="course.html"><i class="fas fa-book"></i> Courses</a></li>
+                        <li><a href="t.html"><i class="fas fa-code"></i> Tutorials</a></li>
+                        <li><a href="#"><i class="fas fa-sticky-note"></i> Notes</a></li>
+                        <li><a href="#"><i class="fas fa-blog"></i> Blog</a></li>
+                        <li><a href="#"><i class="fas fa-certificate"></i> Certifications</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="#"><i class="fas fa-briefcase"></i> Work With Us</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter to get the latest updates on courses and tutorials.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 CodeWithYogiPatel. All rights reserved. Made with ❤️ and ☕ in India</p>
+                <ul class="footer-links-inline">
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Refund</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Navigation Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // Sidebar Toggle
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebarClose = document.getElementById('sidebarClose');
+        const sidebar = document.getElementById('sidebar');
+
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        sidebarClose.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+        });
+
+        // Submenu Toggle
+        const submenuToggles = document.querySelectorAll('.submenu-toggle');
+        
+        submenuToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                const submenu = toggle.nextElementSibling;
+                const icon = toggle.querySelector('.fa-chevron-down');
+                
+                submenu.classList.toggle('active');
+                
+                if (submenu.classList.contains('active')) {
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.querySelector('.sidebar-search input');
+        
+        searchInput.addEventListener('keyup', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const menuItems = document.querySelectorAll('.sidebar-menu li a');
+            
+            menuItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                const parentLi = item.parentElement;
+                
+                if (text.includes(searchTerm)) {
+                    parentLi.style.display = 'block';
+                } else {
+                    parentLi.style.display = 'none';
+                }
+            });
+        });
+
+        // Active link highlighting
+        const sidebarLinks = document.querySelectorAll('.sidebar-menu li a');
+        
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sidebarLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Newsletter Form
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = newsletterForm.querySelector('input[type="email"]').value;
+                
+                // Here you would normally send the email to your server
+                // For this example, we'll just show a success message
+                alert(`Thank you for subscribing with email: ${email}`);
+                newsletterForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
