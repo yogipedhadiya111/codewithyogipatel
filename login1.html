@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | CodeWith Yogi Patel</title>
+
+  <meta name="description" content="Login to your CodeWith Yogi Patel account to access courses, tutorials, and learning resources.">
+  <meta name="keywords" content="login, CodeWith Yogi Patel, coding courses, programming tutorials">
+  <meta name="author" content="Yogi Patel">
+
+  <!-- Google Identity Services -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="login1.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <i class="fas fa-code"></i>
+          <span>CodeWith Yogi Patel</span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Tutorials</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Notes</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="nav-buttons">
+          <button class="btn btn-outline">Signup</button>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main id="main-content">
+    <section class="login-section">
+      <div class="container">
+        <div class="login-container">
+          <div class="login-form-container">
+            <div class="login-header">
+              <h1>Welcome to CodeWith Yogi Patel</h1>
+              <p>Login to your account</p>
+            </div>
+
+            <div class="social-login">
+              <p class="social-text">Continue with a social account</p>
+
+              <!-- ✅ Google Sign In -->
+              <div id="g_id_onload"
+                data-client_id="730566684699-nneg42ufg98jji5som164sj0qdkjlb9n.apps.googleusercontent.com"
+                data-context="signin"
+                data-ux_mode="popup"
+                data-callback="handleCredentialResponse"
+                data-auto_prompt="false">
+              </div>
+
+              <div class="g_id_signin"
+                data-type="standard"
+                data-shape="rectangular"
+                data-theme="outline"
+                data-text="signin_with"
+                data-size="large"
+                data-logo_alignment="left">
+              </div>
+
+              <!-- Other buttons -->
+              <button class="social-btn github-btn" id="githubLogin">
+                <i class="fab fa-github"></i><span>Continue with GitHub</span>
+              </button>
+
+              <button class="social-btn microsoft-btn" id="microsoftLogin">
+                <i class="fab fa-microsoft"></i><span>Continue with Microsoft</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="divider"><span>Or</span></div>
+
+          <!-- Email Login -->
+          <form class="login-form" id="loginForm">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <div class="input-group">
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <i class="fas fa-envelope input-icon"></i>
+              </div>
+              <span id="emailError" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="input-group">
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <i class="fas fa-lock input-icon"></i>
+                <button type="button" class="toggle-password" id="togglePassword">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+              <span id="passwordError" class="error-message"></span>
+            </div>
+
+            <div class="form-options">
+              <div class="remember-me">
+                <input type="checkbox" id="rememberMe"><label for="rememberMe">Remember me</label>
+              </div>
+              <a href="#" class="forgot-password">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary login-btn">Continue via Email</button>
+          </form>
+
+          <div class="login-footer">
+            <p>By clicking continue, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
+            <p class="signup-link">Don’t have an account? <a href="#">Sign up</a></p>
+          </div>
+        </div>
+
+        <!-- Image + Features -->
+        <div class="login-image-container">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80" alt="Coder Student">
+          <div class="login-features">
+            <div class="feature">
+              <i class="fas fa-graduation-cap"></i>
+              <h3>Expert-Led Courses</h3>
+              <p>Learn from industry experts</p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-laptop-code"></i>
+              <h3>Hands-On Projects</h3>
+              <p>Build real-world projects</p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-certificate"></i>
+              <h3>Certification</h3>
+              <p>Earn certificates on completion</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Main</h3>
+          <ul><li><a href="index.html">Home</a></li><li><a href="#">Contact</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h3>Learn</h3>
+          <ul><li><a href="#">Courses</a></li><li><a href="#">Tutorials</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright"><p>Made with ❤️ and ☕ in India</p></div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <link rel="stylesheet" href="login.css">
+
+  <!-- ✅ Include JS -->
+  <script src="login2.js"></script>
+</body>
+</html>
